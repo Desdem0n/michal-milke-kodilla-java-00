@@ -1,9 +1,6 @@
 package com.kodilla.patterns.strategy.social;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 public class UserTestSuite {
     private static int testCounter = 0;
@@ -27,29 +24,40 @@ public class UserTestSuite {
 
     @Test
     public void testDefaultSharingStrategies() {
+        //Given
+        User mateusz = new YGeneration("mateusz500+");
+        User majk = new ZGeneration("majk500+");
+        User ann = new Millenials("ann500+");
+        //When
+        String user1ShouldShare = mateusz.sharePost();
+        System.out.println("User1 should: " + user1ShouldShare);
+        String user2ShouldShare = majk.sharePost();
+        System.out.println("User2 should: " + user2ShouldShare);
+        String user3ShouldShare = ann.sharePost();
+        System.out.println("User3 should: " + user3ShouldShare);
+        //Then
+        Assert.assertEquals("facebook", user1ShouldShare);
+        Assert.assertEquals("snapchat", user2ShouldShare);
+        Assert.assertEquals("twitter", user3ShouldShare);
 
-        User mateusz2000 = new YGeneration("mateusz2000");
-        User majk35 = new ZGeneration("majk35");
-        User ann92 = new Millenials("ann92");
+    }
 
-        mateusz2000.share("java isn't simple");
-        majk35.share("weather has suddenly changed");
-        ann92.share("meal I proposed for today is...");
+//    @Test
+//    public void testIndividualSharingStrategy1() {
+//        //Given
+//        User marry1 = new YGeneration("marry");
+//        //When
+//        marry1.setSocialPublishingStrategy(new SnapchatPublisher());
+//        String user4 = marry1.share();
+//        //Then
+//        Assert.assertEquals("i dislike drugs!!!",user4);
 
     }
 
-    @Test
-    public void testIndividualSharingStrategy1() {
-        User marry1 = new YGeneration("marry");
-        marry1.setSocialPublishingStrategy(new SnapchatPublisher());
-        marry1.share("i dislike drugs!!! ");
-    }
-
-    @Test
-    public void testIndividualSharingStrategy2() {
-        User bobby1 = new ZGeneration("Bobby");
-        bobby1.setSocialPublishingStrategy(new SnapchatPublisher());
-        bobby1.share("i have found such a big diamond!!! ");
-
-    }
-}
+//    @Test
+//    public void testIndividualSharingStrategy2() {
+//        User bobby1 = new ZGeneration("Bobby");
+//        bobby1.setSocialPublishingStrategy(new SnapchatPublisher());
+//        bobby1.share();
+//
+//    }
