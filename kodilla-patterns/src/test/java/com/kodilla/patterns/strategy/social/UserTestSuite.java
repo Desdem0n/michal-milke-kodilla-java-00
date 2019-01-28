@@ -40,6 +40,8 @@ public class UserTestSuite {
         Assert.assertEquals("snapchat", user2ShouldShare);
         Assert.assertEquals("twitter", user3ShouldShare);
 
+        System.out.println("hopefully everything works now");
+
     }
 
 //    @Test
