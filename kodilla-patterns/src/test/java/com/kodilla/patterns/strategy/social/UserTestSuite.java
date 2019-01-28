@@ -44,22 +44,21 @@ public class UserTestSuite {
 
     }
 
-//    @Test
-//    public void testIndividualSharingStrategy1() {
-//        //Given
-//        User marry1 = new YGeneration("marry");
-//        //When
-//        marry1.setSocialPublishingStrategy(new SnapchatPublisher());
-//        String user4 = marry1.share();
-//        //Then
-//        Assert.assertEquals("i dislike drugs!!!",user4);
+    @Test
+    public void testIndividualSharingStrategy() {
+        //Given
+        User mateusz = new YGeneration("mateusz500+");
+        //When
+        String user1ShouldShare = mateusz.sharePost();
+        System.out.println("Mateusz500+ should: " + user1ShouldShare);
+        mateusz.setSocialPublisher(new SnapchatPublisher());
+        user1ShouldShare = mateusz.sharePost();
+        System.out.println("Mateusz500+ should: " + user1ShouldShare);
+
+        //Then
+        Assert.assertEquals("twitter", user1ShouldShare);
 
     }
+}
 
-//    @Test
-//    public void testIndividualSharingStrategy2() {
-//        User bobby1 = new ZGeneration("Bobby");
-//        bobby1.setSocialPublishingStrategy(new SnapchatPublisher());
-//        bobby1.share();
-//
-//    }
+
