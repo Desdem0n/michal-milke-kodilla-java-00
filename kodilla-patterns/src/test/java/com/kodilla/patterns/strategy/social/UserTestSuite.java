@@ -48,15 +48,24 @@ public class UserTestSuite {
     public void testIndividualSharingStrategy() {
         //Given
         User mateusz = new YGeneration("mateusz500+");
+        User majk = new ZGeneration("majk500+");
+        User ann = new Millenials("ann500+");
         //When
         String user1ShouldShare = mateusz.sharePost();
         System.out.println("Mateusz500+ should: " + user1ShouldShare);
-        mateusz.setSocialPublisher(new SnapchatPublisher());
+        mateusz.setSocialPublisher(new TwitterPublisher());
         user1ShouldShare = mateusz.sharePost();
-        System.out.println("Mateusz500+ should: " + user1ShouldShare);
+
+        String user2ShouldShare = majk.sharePost();
+        System.out.println("Majk500+ should: " + user2ShouldShare);
+        majk.setSocialPublisher(new SnapchatPublisher());
+
 
         //Then
         Assert.assertEquals("twitter", user1ShouldShare);
+        Assert.assertEquals("snapchat", user2ShouldShare);
+
+        System.out.println("hopefully everything works now also here");
 
     }
 }
