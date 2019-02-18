@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-02-15T13:28:05" hostname="DESKTOP-DBPLNO6" time="0.003">
+  <properties/>
+  <testcase name="testFactoryPainting" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.002"/>
+  <testcase name="testFactoryDriving" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.0"/>
+  <testcase name="testFactoryShopping" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.0"/>
+  <system-out><![CDATA[This is the beginning of all tests.
+Preparing to execute test #1
+Preparing to execute test #2
+Preparing to execute test #3
+All tests were finished.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

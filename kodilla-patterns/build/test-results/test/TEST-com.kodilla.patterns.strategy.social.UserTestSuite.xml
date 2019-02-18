@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.strategy.social.UserTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-02-15T13:28:05" hostname="DESKTOP-DBPLNO6" time="0.007">
+  <properties/>
+  <testcase name="testDefaultSharingStrategies" classname="com.kodilla.patterns.strategy.social.UserTestSuite" time="0.006"/>
+  <testcase name="testIndividualSharingStrategy" classname="com.kodilla.patterns.strategy.social.UserTestSuite" time="0.001"/>
+  <system-out><![CDATA[This is the beginning of all tests.
+Preparing to execute test #1
+User1 should: facebook
+User2 should: snapchat
+User3 should: twitter
+hopefully everything works now
+Preparing to execute test #2
+Mateusz500+ should: facebook
+Majk500+ should: snapchat
+hopefully everything works now also here
+All tests are finished.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

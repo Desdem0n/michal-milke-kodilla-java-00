@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.book.BookTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-01-21T12:00:16" hostname="DESKTOP-DBPLNO6" time="0.01">
+  <properties/>
+  <testcase name="testGetListUsingFor" classname="com.kodilla.stream.book.BookTestSuite" time="0.003"/>
+  <testcase name="testGetListUsingIntStream" classname="com.kodilla.stream.book.BookTestSuite" time="0.007"/>
+  <system-out><![CDATA[This is the beginning of tests.
+Preparing to execute test #1
+Test concerning its' effects #1: true
+Preparing to execute test #2
+true
+Test concerning what was meant to validate #2: true
+All tests are finished.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
