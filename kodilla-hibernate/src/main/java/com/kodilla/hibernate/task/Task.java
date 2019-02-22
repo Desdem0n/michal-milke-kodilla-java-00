@@ -1,17 +1,13 @@
 package com.kodilla.hibernate.task;
 
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
 @Table(name = "TASKS")
-public final class Task {
+public  class Task {
     private int id;
     private String description;
     private Date created;
@@ -29,7 +25,7 @@ public final class Task {
 
     @Id
     @GeneratedValue
-    @NotNull
+    //@NotNull
     @Column(name="ID", unique = true)
     public int getId() {
         return id;
