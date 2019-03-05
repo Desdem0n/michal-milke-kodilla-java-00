@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FlightFinderRunner {
-
     public static void main(String args[]) {
 
         Flight flight = new Flight("Warsaw", "Gdansk");
