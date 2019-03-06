@@ -10,23 +10,23 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TaskListDaoTestSuite {
+public class TasksListDaoTestSuite {
     @Autowired
-    private TaskListDao taskListDao;
+    private TasksListDao tasksListDao;
     private static final String LISTNAME = "List name";
     private static final String DESCRIPTION = "Tasks to do";
 
     @Test
     public void testFindByListName() {
         //Given
-        TaskList taskList = new TaskList(LISTNAME, DESCRIPTION);
-        taskListDao.save(taskList);
+        TasksList tasksList = new TasksList(LISTNAME, DESCRIPTION);
+        tasksListDao.save(tasksList);
         //When
-        List<TaskList> readTaskList = taskListDao.findByListName(LISTNAME);
+        List<TasksList> readTasksList = tasksListDao.findByListName(LISTNAME);
         //Then
-        Assert.assertEquals(1, readTaskList.size());
+        Assert.assertEquals(1, readTasksList.size());
         //CleanUp
-        int id = readTaskList.get(0).getId();
-        taskListDao.delete(id);
+        int id = readTasksList.get(0).getId();
+        tasksListDao.delete(id);
     }
 }
